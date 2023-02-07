@@ -46,7 +46,7 @@ namespace dataManipulation
             //else-if
             if (rawInput.Contains(detectKeyWord))
             {
-                Console.WriteLine($"\nTeksen inderholder ikke ordet '{detectKeyWord}'.");
+                Console.WriteLine($"\nTeksen inderholder ordet '{detectKeyWord}'.");
             }
             else
                 Console.WriteLine($"\nTeksen inderholder ikke ordet '{detectKeyWord}'.");
