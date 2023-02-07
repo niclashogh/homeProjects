@@ -32,7 +32,7 @@ namespace dataManipulation
             int wordEndIndex = stringAtIndex.Length - 1; // Finds length of stringAtIndex -1 (the space)
 
             Console.WriteLine($"\nDet 2. ord i sætningen er '{rawInput.Substring(wordIndex, wordEndIndex)}'\nOrdets placering = {wordIndex}\nOrdets længde = {wordEndIndex}.");
-        } //Could also be achived with .Split(' ')
+        } //Could also be achived with .Split(' ') & string[]
 
         /* =============================================================================================================================
                 Contains
