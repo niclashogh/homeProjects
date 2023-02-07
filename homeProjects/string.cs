@@ -1,0 +1,123 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace dataManipulation
+{
+    public class stringManipulation
+    {
+        public stringManipulation(string rawInput) //Constructor
+        {
+            Console.WriteLine($"Bruger input : {rawInput}");
+
+            Index(rawInput);
+            Contains(rawInput);
+            Lenghts(rawInput);
+            CharIndex(rawInput);
+            DoubleSplit();
+        }
+
+        /* =============================================================================================================================
+                Index
+        ============================================================================================================================= */
+
+        public static void Index(string rawInput) //Method
+        {
+            //Variables
+            int wordIndex = rawInput.IndexOf(" ") + 1; //Find wordIndex +1 (to skip the space) - only nessecary to skip bc we want to skip the space in this case
+            string stringAtIndex = rawInput.Substring(0, wordIndex); //Prints Substring from space 0 = "start of wordIndex" to end = "wordIndex"
+            int wordEndIndex = stringAtIndex.Length - 1; // Finds length of stringAtIndex -1 (the space)
+
+            Console.WriteLine($"\nDet 2. ord i sætningen er '{rawInput.Substring(wordIndex, wordEndIndex)}'\nOrdets placering = {wordIndex}\nOrdets længde = {wordEndIndex}.");
+        }
+
+        /* =============================================================================================================================
+                Contains
+        ============================================================================================================================= */
+
+        public static void Contains(string rawInput) //Method
+        {
+            //Variables
+            string detecKeyWord = "at";
+
+            //else-if
+            if (rawInput.Contains(detecKeyWord))
+            {
+                Console.WriteLine($"\nTeksen inderholder ikke ordet '{detecKeyWord}'.");
+            }
+            else
+                Console.WriteLine($"\nTeksen inderholder ikke ordet '{detecKeyWord}'.");
+        }
+
+        /* =============================================================================================================================
+                Lenghts
+        ============================================================================================================================= */
+
+        public static void Lenghts(string rawInput)
+        {
+            //Variables & Arrays
+            string[] wordLenghts = rawInput.Split(' ');
+            int longestWordInt = 0;
+            string longestWord = null;
+
+            foreach (string word in wordLenghts)
+            {
+
+                if (word.Length > longestWordInt)
+                {
+                    longestWordInt = word.Length;
+                    longestWord = word;
+                }
+            }
+
+            Console.WriteLine($"\nEt af de/Det længeste ord er : '{longestWord}' med ialt '{longestWordInt}' bokstaver.");
+        }
+
+        /* =============================================================================================================================
+                CharIndex
+        ============================================================================================================================= */
+
+        public static void CharIndex(string rawInput)
+        {
+            //Variables
+            int charIndex = 15;
+
+            Console.WriteLine($"\nBokstavet på index {charIndex} er '{rawInput[charIndex]}'.");
+        }
+
+        /* =============================================================================================================================
+                Split
+        ============================================================================================================================= */
+
+        public static void DoubleSplit()
+        {
+            //Variables & Arrays
+            string dataSet = "Solid;Gas;Liquid*Missionary;Doggy;Classic Rape*Keyboard;Mouse;Screen;Cabinet";
+            string[] splitSections = dataSet.Split('*');
+            int sectionInt = 0;
+
+            //Print dataSet
+            Console.WriteLine($"\nSplit dataset : {dataSet}");
+
+            //For-loop
+            foreach (string value in splitSections)
+            {
+                Console.WriteLine();
+                int elementInt = 0;
+                string[] splitElements = splitSections[sectionInt].Split(';');
+
+                foreach (string value1 in splitElements)
+                {
+                    Console.WriteLine($"{splitElements[elementInt]}");
+                    elementInt++;
+                }
+                sectionInt++;
+            }
+        }
+
+        // Split End
+    }
+}
