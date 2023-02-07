@@ -32,7 +32,7 @@ namespace dataManipulation
             int wordEndIndex = stringAtIndex.Length - 1; // Finds length of stringAtIndex -1 (the space)
 
             Console.WriteLine($"\nDet 2. ord i sætningen er '{rawInput.Substring(wordIndex, wordEndIndex)}'\nOrdets placering = {wordIndex}\nOrdets længde = {wordEndIndex}.");
-        }
+        } //Could also be achived with .Split(' ')
 
         /* =============================================================================================================================
                 Contains
@@ -41,28 +41,29 @@ namespace dataManipulation
         public static void Contains(string rawInput) //Method
         {
             //Variables
-            string detecKeyWord = "at";
+            string detectKeyWord = "at";
 
             //else-if
-            if (rawInput.Contains(detecKeyWord))
+            if (rawInput.Contains(detectKeyWord))
             {
-                Console.WriteLine($"\nTeksen inderholder ikke ordet '{detecKeyWord}'.");
+                Console.WriteLine($"\nTeksen inderholder ikke ordet '{detectKeyWord}'.");
             }
             else
-                Console.WriteLine($"\nTeksen inderholder ikke ordet '{detecKeyWord}'.");
+                Console.WriteLine($"\nTeksen inderholder ikke ordet '{detectKeyWord}'.");
         }
 
         /* =============================================================================================================================
                 Lenghts
         ============================================================================================================================= */
 
-        public static void Lenghts(string rawInput)
+        public static void Lenghts(string rawInput) //Method
         {
             //Variables & Arrays
             string[] wordLenghts = rawInput.Split(' ');
             int longestWordInt = 0;
             string longestWord = null;
 
+            //Loop
             foreach (string word in wordLenghts)
             {
 
@@ -80,7 +81,7 @@ namespace dataManipulation
                 CharIndex
         ============================================================================================================================= */
 
-        public static void CharIndex(string rawInput)
+        public static void CharIndex(string rawInput) //Method
         {
             //Variables
             int charIndex = 15;
@@ -92,7 +93,7 @@ namespace dataManipulation
                 Split
         ============================================================================================================================= */
 
-        public static void DoubleSplit()
+        public static void DoubleSplit() //Method
         {
             //Variables & Arrays
             string dataSet = "Solid;Gas;Liquid*Missionary;Doggy;Classic Rape*Keyboard;Mouse;Screen;Cabinet";
@@ -102,7 +103,7 @@ namespace dataManipulation
             //Print dataSet
             Console.WriteLine($"\nDatasæt : {dataSet}");
 
-            //For-loop
+            //Loop
             foreach (string value in splitSections)
             {
                 Console.WriteLine();
