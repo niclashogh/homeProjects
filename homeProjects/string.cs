@@ -73,7 +73,7 @@ namespace dataManipulation
                 }
             }
 
-            Console.WriteLine($"\nEt af de/Det længeste ord er : '{longestWord}' med ialt '{longestWordInt}' bokstaver.");
+            Console.WriteLine($"\nEt af de/Det længeste ord er : '{longestWord}' med i alt '{longestWordInt}' bokstaver.");
         }
 
         /* =============================================================================================================================
@@ -85,7 +85,7 @@ namespace dataManipulation
             //Variables
             int charIndex = 15;
 
-            Console.WriteLine($"\nBokstavet på index {charIndex} er '{rawInput[charIndex]}'.");
+            Console.WriteLine($"\nBokstavet på placeringen '{charIndex}' er '{rawInput[charIndex]}'.");
         }
 
         /* =============================================================================================================================
@@ -100,7 +100,7 @@ namespace dataManipulation
             int sectionInt = 0;
 
             //Print dataSet
-            Console.WriteLine($"\nSplit dataset : {dataSet}");
+            Console.WriteLine($"\nDatasæt : {dataSet}");
 
             //For-loop
             foreach (string value in splitSections)
