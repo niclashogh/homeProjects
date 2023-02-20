@@ -41,15 +41,15 @@ namespace dataManipulation
         public static void Contains(string rawInput) //Method
         {
             //Variables
-            string detectKeyWord = "at";
+            string detectKeyWord = "at"; //Field
 
             //else-if
-            if (rawInput.Contains(detectKeyWord))
+            if (rawInput.Contains(detectKeyWord)) //Call internal Method
             {
-                Console.WriteLine($"\nTeksen inderholder ordet '{detectKeyWord}'.");
+                Console.WriteLine($"\nTeksen inderholder ordet '{detectKeyWord}'."); //Field
             }
             else
-                Console.WriteLine($"\nTeksen inderholder ikke ordet '{detectKeyWord}'.");
+                Console.WriteLine($"\nTeksen inderholder ikke ordet '{detectKeyWord}'."); //Field
         }
 
         /* =============================================================================================================================
@@ -119,6 +119,6 @@ namespace dataManipulation
             }
         }
 
-        // Split End
+        //Split End
     }
 }
