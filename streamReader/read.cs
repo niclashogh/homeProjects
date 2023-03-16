@@ -50,13 +50,15 @@ namespace streamReader
         }
 
         /* =============================================================================================================================
-                ReadCSV
+                ReadCSV (NOT COMPLETE >> USE List<>)   https://stackoverflow.com/questions/5282999/reading-csv-file-and-storing-values-into-an-array
         ============================================================================================================================= */
 
         public static void ReadCSV()
         {
             //Variables
+            int i = 0;
 
+            Console.WriteLine(".CSV Datasættet indeholder:");
 
             if (!File.Exists(CSVPath))
             {
@@ -65,9 +67,37 @@ namespace streamReader
             }
             else
             {
-                //Instanciate method
-                StreamWriter readContent = new StreamWriter(CSVPath);
+                try
+                {
+                    //Instanciate method
+                    StreamReader readConent = new StreamReader(CSVPath);
+
+                    //use string[] split to check how many colums(';') & rows('\n') there is
+
+                    //Split >> Problem
+                    while (!readConent.EndOfStream)
+                    {
+                        string splitLine = readConent.ReadLine().Split('\n').ToString();
+                        Console.WriteLine(splitLine[i]); //Delete when method is working
+
+                        string[] splitBreak = splitLine.Split(';');
+                        Console.WriteLine(splitBreak[i]);
+                        i++;
+                        Console.WriteLine(splitBreak[i]);
+                    }
+                    readConent.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
         }
+
+        /* =============================================================================================================================
+                ReadEXCEL
+        ============================================================================================================================= */
+
+
     }
 }
