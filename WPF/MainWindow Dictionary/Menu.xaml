@@ -2,15 +2,56 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
     <!-- Styles -->
+    
+    <!-- (R0,C0), Header -->
     <Style TargetType="TextBlock" x:Key="Header">
-        <Setter Property="FontSize" Value="28"/>
+        <Setter Property="FontSize" Value="26"/>
         <Setter Property="FontWeight"  Value="DemiBold"/>
+        <Setter Property="Text" Value="Prodution"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10,0,0,0"/>
     </Style>
 
+    <!-- (R1,C0), Menu -->
     <Style TargetType="Button" x:Key="MenuButton">
         <Setter Property="FontSize" Value="20"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Background" Value="DarkSlateBlue"/>
+        <Setter Property="Height" Value="30"/>
     </Style>
+
+    <!-- R1,C0), Logout -->
+    <Style TargetType="Button" x:Key="LogoutButton">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Margin" Value="10"/>
+    </Style>
+
+    <!-- (R0,C1), TopButtons-->
+    <Style TargetType="Button" x:Key="TopButtons">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Margin" Value="0,0,10,0"/>
+    </Style>
+
+    <Style TargetType="StackPanel" x:Key="TopStackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Margin" Value="60,10,10,10"/>
+    </Style>
+    
+    <!-- (R1,C1), Content -->
+    <Style TargetType="StackPanel" x:Key="ContentPanel">
+        <Setter Property="Margin" Value="20,20,0,0"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="Validate">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Width" Value="90"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+    
 
 </ResourceDictionary>

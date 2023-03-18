@@ -5,62 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Budweg" Height="450" Width="800">
     <!-- Dictionary Resources -->
     <Window.Resources>
         <ResourceDictionary Source="MainWindow Dictionary\Menu.xaml"/>
     </Window.Resources>
     
-    <!-- Grid -->
     <Grid>
-        <Grid.ColumnDefinitions> <!-- Columns -->
-            <!-- 0 Column -->
-            <ColumnDefinition Width="100">
+        <!-- Grid Definitions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            </ColumnDefinition>
-            <!-- 1 Column -->
-            <ColumnDefinition Width="*">
-
-            </ColumnDefinition>
-        </Grid.ColumnDefinitions> <!-- Columns, End -->
-
-        <Grid.RowDefinitions> <!-- Rows -->
-            <!-- 0 Row -->
-            <RowDefinition Height="50">
-            </RowDefinition>
-
-            <!-- 1 Row -->
-            <RowDefinition Height="30">
-
-            </RowDefinition>
-
-            <!-- 2 Row -->
-            <RowDefinition Height="30">
-
-            </RowDefinition>
-
-            <!-- 3 Row -->
-            <RowDefinition Height="30">
-
-            </RowDefinition>
-
-            <!-- 4 Row -->
-            <RowDefinition Height="*">
-
-            </RowDefinition>
-        </Grid.RowDefinitions> <!-- Rows, End -->
-        
         <!-- (R0,C0) Content -->
-        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource Header}" Text="Header"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource Header}"/>
 
         <!-- (R1,C0) Content -->
-        <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuButton}" Content="Menu 1" x:Name="Menu1" />
-
-        <!-- (R2,C0) Content -->
-        <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuButton}" Content="Menu 2" x:Name="Menu2"/>
-
-        <!-- (R3,C0) Content -->
-        <Button Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuButton}" Content="Menu 3" x:Name="Menu3"/>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Button Style="{StaticResource MenuButton}" Content="Menu 1" x:Name="Menu1" />
+            <Button Style="{StaticResource MenuButton}" Content="Menu 2" x:Name="Menu2"/>
+            <Button Style="{StaticResource MenuButton}" Content="Menu 3" x:Name="Menu3"/>
+        </StackPanel>
         
+        <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource LogoutButton}" Content="Logout" x:Name="Logout" />
+        
+        <!-- (R0,C1) Content -->
+        <StackPanel Grid.Row="0" Grid.Column="1" Style="{StaticResource TopStackPanel}">
+            <Button x:Name="Test" Content="TestD" Style="{StaticResource TopButtons}"/>
+            <Button x:Name="Test1" Content="Test1D" Style="{StaticResource TopButtons}"/>
+            <Button x:Name="Test2" Content="Test2D" Style="{StaticResource TopButtons}"/>
+            <Button x:Name="Test3" Content="Test3D" Style="{StaticResource TopButtons}"/>
+        </StackPanel>
+
+        <!-- (R1,C1) Content -->
+        <Border Background="LightGray" Grid.Row="1" Grid.Column="1"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Style="{StaticResource ContentPanel}">
+            <ListBox x:Name="List" Margin="10" />
+        </StackPanel>
+
+        <Button Grid.Row="1" Grid.Column="1" x:Name="Validate" Content="Validate" Style="{StaticResource Validate}"/>
     </Grid>
 </Window>
