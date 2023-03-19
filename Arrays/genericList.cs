@@ -11,7 +11,7 @@ namespace arrays
         public static void GenericList()
         {
             //Instances of class Car
-            Car car1 = new Car() { Launched = "1978", Model = "Fiat" };
+            Car car1 = new Car() { Launched = "1978", Model = "Fiat" }; //Car Class in arrayList.cs
             Car car2 = new Car() { Launched = "2001", Model = "Wolvo" };
 
             //Better method to making a list

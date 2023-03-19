@@ -7,7 +7,7 @@
     <Style TargetType="TextBlock" x:Key="Header">
         <Setter Property="FontSize" Value="26"/>
         <Setter Property="FontWeight"  Value="DemiBold"/>
-        <Setter Property="Text" Value="Prodution"/>
+        <Setter Property="Text" Value="Medarbejder"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Margin" Value="10,0,0,0"/>
     </Style>
@@ -16,14 +16,16 @@
     <Style TargetType="Button" x:Key="MenuButton">
         <Setter Property="FontSize" Value="20"/>
         <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="0,0,0,5"/>
     </Style>
 
     <!-- R1,C0), Logout -->
     <Style TargetType="Button" x:Key="LogoutButton">
         <Setter Property="FontSize" Value="20"/>
-        <Setter Property="Height" Value="30"/>
+        <Setter Property="Height" Value="35"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
-        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
     </Style>
 
     <!-- (R0,C1), TopButtons-->
@@ -41,7 +43,7 @@
     
     <!-- (R1,C1), Content -->
     <Style TargetType="StackPanel" x:Key="ContentPanel">
-        <Setter Property="Margin" Value="20,20,0,0"/>
+        <Setter Property="Margin" Value="20,20,20,20"/>
     </Style>
 
     <Style TargetType="Button" x:Key="Validate">

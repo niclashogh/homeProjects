@@ -15,14 +15,77 @@ using System.Windows.Shapes;
 
 namespace WPF
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+
+            foreach (Person o in PersonRepo.Load())
+            {
+                MedarbejderList.Items.Add(o);
+            }
+            
+
+            //var getPerson = PersonRepo.Load();
+            //MedarbejderList.ItemsSource = getPerson;
         }
+
+        #region Controls
+
+        //Clickables, Menu
+
+        private void Menu0_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Menu1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Menu2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        //Clickables, TopMenu
+
+        private void TopButton0_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TopButton1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TopButton2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TopButton3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        //Clickables, Customs
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Validate_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        #endregion
     }
+
 }
