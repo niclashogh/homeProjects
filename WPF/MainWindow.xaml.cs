@@ -12,24 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF.ViewModels;
 
 namespace WPF
 {
     public partial class MainWindow : Window
     {
+        PersonRepo pr = new PersonRepo();
 
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = pr;
 
-            foreach (Person o in PersonRepo.Load())
-            {
-                MedarbejderList.Items.Add(o);
-            }
-            
-
-            //var getPerson = PersonRepo.Load();
-            //MedarbejderList.ItemsSource = getPerson;
+            var getPerson = PersonRepo.Load();
+            MedarbejderList.ItemsSource = getPerson;
         }
 
         #region Controls

@@ -52,33 +52,21 @@
                         <GridViewColumn Header="First Name" Width="150">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding FirstName}">
-                                        <TextBlock.DataContext>
-                                            <local:Person/>
-                                        </TextBlock.DataContext>
-                                    </TextBlock>
+                                    <TextBlock Text="{Binding FirstName}" Style="{StaticResource firstName}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Header="Middle Name" Width="150">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding MiddleName}">
-                                        <TextBlock.DataContext>
-                                            <local:Person/>
-                                        </TextBlock.DataContext>
-                                    </TextBlock>
+                                    <TextBlock Text="{Binding MiddleName}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Header="Last Name" Width="150">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding LastName}">
-                                        <TextBlock.DataContext>
-                                            <local:Person/>
-                                        </TextBlock.DataContext>
-                                    </TextBlock>
+                                    <TextBlock Text="{Binding LastName}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>

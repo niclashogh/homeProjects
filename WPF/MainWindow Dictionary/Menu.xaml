@@ -55,5 +55,9 @@
         <Setter Property="FontSize" Value="20"/>
     </Style>
     
+    <!-- ListView Content -->
+    <Style TargetType="TextBlock" x:Key="firstName">
+        <Setter Property="TextDecorations" Value="Underline"/>
+    </Style>
 
 </ResourceDictionary>
