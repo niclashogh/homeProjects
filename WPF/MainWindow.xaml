@@ -46,7 +46,7 @@
         <Border Background="LightGray" Grid.Row="1" Grid.Column="1"/>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Style="{StaticResource ContentPanel}">
-            <ListView Width="450" HorizontalAlignment="Left" SelectionMode="Single" Name="MedarbejderList">
+            <ListView Width="450" HorizontalAlignment="Left" SelectionMode="Single" Name="MedarbejderList" SelectedItem="{Binding SelectedPerson}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="First Name" Width="150">
@@ -77,13 +77,13 @@
 
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="480,20,20,20" HorizontalAlignment="Left">
             <TextBlock Text="First Name" Height="30" VerticalAlignment="Top" TextAlignment="Center" FontSize="18" />
-            <TextBox Width="120" Height="30" VerticalAlignment="Top"/>
+            <TextBox Width="160" Height="30" VerticalAlignment="Top" FontSize="18" Text="{Binding SelectedPerson.FirstName}"/>
 
             <TextBlock Text="Middle Name" Height="30" VerticalAlignment="Top" TextAlignment="Center" FontSize="18" />
-            <TextBox Width="120" Height="30" VerticalAlignment="Top"/>
+            <TextBox Width="160" Height="30" VerticalAlignment="Top" FontSize="18" Text="{Binding SelectedPerson.MiddleName}"/>
 
             <TextBlock Text="Last Name" Height="30" VerticalAlignment="Top" TextAlignment="Center" FontSize="18" />
-            <TextBox Width="120" Height="30" VerticalAlignment="Top"/>
+            <TextBox Width="160" Height="30" VerticalAlignment="Top" FontSize="18" Text="{Binding SelectedPerson.LastName}"/>
 
             <Button Grid.Row="1" Grid.Column="1" x:Name="Validate" Content="Validate" Style="{StaticResource Validate}" Click="Validate_Click"/>
         </StackPanel>

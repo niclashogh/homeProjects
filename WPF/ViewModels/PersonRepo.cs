@@ -23,5 +23,7 @@ namespace WPF.ViewModels
 
             return newPerson;
         }
+
+        public Person SelectedPerson { get; set; }
     }
 }
