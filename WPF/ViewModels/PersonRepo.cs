@@ -15,11 +15,11 @@ namespace WPF.ViewModels
             List<Person> newPerson = new List<Person>();
 
             //Add
-            newPerson.Add(new Person { FirstName = "Hanne", MiddleName = "Høgh", LastName = "Jensen" });
-            newPerson.Add(new Person { FirstName = "Kennet", MiddleName = "Høgh", LastName = "Jensen" });
-            newPerson.Add(new Person { FirstName = "Niclas", MiddleName = "Høgh", LastName = "Jensen" });
-            newPerson.Add(new Person { FirstName = "Matilde", MiddleName = "Høgh", LastName = "Jensen" });
-            newPerson.Add(new Person { FirstName = "Karoline", MiddleName = "Mongol", LastName = "Unge" });
+            newPerson.Add(new Person { FirstName = "Hanne", MiddleName = "Høgh", LastName = "Jensen", Id = 1});
+            newPerson.Add(new Person { FirstName = "Kennet", MiddleName = "Høgh", LastName = "Jensen", Id = 2 });
+            newPerson.Add(new Person { FirstName = "Niclas", MiddleName = "Høgh", LastName = "Jensen", Id = 3 });
+            newPerson.Add(new Person { FirstName = "Matilde", MiddleName = "Høgh", LastName = "Jensen", Id = 4 });
+            newPerson.Add(new Person { FirstName = "Karoline", MiddleName = "Mongol", LastName = "Unge", Id = 5 });
 
             return newPerson;
         }

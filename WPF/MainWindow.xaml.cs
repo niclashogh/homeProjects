@@ -81,7 +81,7 @@ namespace WPF
 
         private void Validate_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         #endregion
