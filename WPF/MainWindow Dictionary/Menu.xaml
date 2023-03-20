@@ -49,8 +49,9 @@
         <Setter Property="HorizontalAlignment" Value="Left"/>
     </Style>
 
+    <!-- Validate Btn -->
     <Style TargetType="Button" x:Key="Validate">
-        <Setter Property="Margin" Value="5,5,5,5"/>
+        <Setter Property="Margin" Value="5,10,5,5"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Width" Value="90"/>
@@ -61,6 +62,32 @@
     <!-- ListView Content -->
     <Style TargetType="TextBlock" x:Key="firstName">
         <Setter Property="TextDecorations" Value="Underline"/>
+    </Style>
+
+    <Style TargetType="ListView" x:Key="ListViewBlueprint">
+        <Setter Property="Width" Value="450"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="SelectionMode" Value="Single"/>
+    </Style>
+    
+    <!-- TextBox/Block Content -->
+    <Style TargetType="TextBox" x:Key="ContentBox">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="FontSize" Value="18"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="ContentBlock">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="StackPanel" x:Key="ChangeContent">
+        <Setter Property="Width" Value="160"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Margin" Value="480,20,20,20"/>
     </Style>
 
 </ResourceDictionary>
