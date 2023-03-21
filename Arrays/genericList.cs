@@ -19,6 +19,8 @@ namespace arrays
             sList.Add(car1);
             sList.Add(car2);
 
+            sList.Remove(car1);
+
             Console.WriteLine("Liste (List):");
 
             //Foreach instance of the specific obj (Car).

@@ -3,7 +3,7 @@ using dataBase.Models;
 
 namespace dataBase
 {
-    public class Program
+    public class Program //Project not done!
     {
         static void Main(string[] args)
         {

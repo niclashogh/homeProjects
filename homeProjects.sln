@@ -3,25 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataManipulation", "homeProjects\dataManipulation.csproj", "{D23A753C-6691-4E01-BDEE-2D971D8ED399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dataManipulation", "homeProjects\dataManipulation.csproj", "{D23A753C-6691-4E01-BDEE-2D971D8ED399}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arrays", "Arrays\arrays.csproj", "{975C80F6-C13C-4051-90AF-F7BE9F2802A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arrays", "Arrays\arrays.csproj", "{975C80F6-C13C-4051-90AF-F7BE9F2802A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inheritance", "Inheritance\inheritance.csproj", "{8371B8AE-8445-473D-A113-52254816709F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "inheritance", "Inheritance\inheritance.csproj", "{8371B8AE-8445-473D-A113-52254816709F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "subscription", "subscription\subscription.csproj", "{D2704D2B-0F75-420B-AD87-C59F7FB75716}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "subscription", "subscription\subscription.csproj", "{D2704D2B-0F75-420B-AD87-C59F7FB75716}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loops", "loops\loops.csproj", "{4926A6DA-6513-40CC-85EF-865A18223F5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loops", "loops\loops.csproj", "{4926A6DA-6513-40CC-85EF-865A18223F5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "streamReader", "streamReader\streamReader.csproj", "{42C9BCE4-3199-475F-8979-50CC306DE15C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "streamReader", "streamReader\streamReader.csproj", "{42C9BCE4-3199-475F-8979-50CC306DE15C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataBase", "dataBase\dataBase.csproj", "{436A1947-EEFB-4706-8C87-D8C2F94B4F6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dataBase", "dataBase\dataBase.csproj", "{436A1947-EEFB-4706-8C87-D8C2F94B4F6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exceptions", "exceptions\exceptions.csproj", "{E0FC530F-6DAB-49C5-8548-F08D1926E4FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exceptions", "exceptions\exceptions.csproj", "{E0FC530F-6DAB-49C5-8548-F08D1926E4FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "enumerations", "enumerations\enumerations.csproj", "{A9E5D622-236A-406A-A899-F66B1CADD623}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "enumerations", "enumerations\enumerations.csproj", "{A9E5D622-236A-406A-A899-F66B1CADD623}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF", "WPF\WPF.csproj", "{F2176446-3F06-4F48-864A-B74182FB766C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF", "WPF\WPF.csproj", "{F2176446-3F06-4F48-864A-B74182FB766C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvvm", "mvvm\mvvm.csproj", "{6057A06D-A8FC-4617-B842-00CEA63BF015}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{F2176446-3F06-4F48-864A-B74182FB766C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2176446-3F06-4F48-864A-B74182FB766C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2176446-3F06-4F48-864A-B74182FB766C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6057A06D-A8FC-4617-B842-00CEA63BF015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6057A06D-A8FC-4617-B842-00CEA63BF015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6057A06D-A8FC-4617-B842-00CEA63BF015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6057A06D-A8FC-4617-B842-00CEA63BF015}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
