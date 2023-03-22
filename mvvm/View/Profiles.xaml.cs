@@ -24,16 +24,16 @@ namespace mvvm.View
         {
             InitializeComponent();
             AddProfileList();
+ 
         }
 
         private void AddProfileList()
         {
-            /*
-            foreach (Profiles item in Read) //Needs IEnumerable/Interfaces/ViewModels (??)
-            {
-                ProfileList.Items.Add(item);
-            }
-            */
+            ProfileRepo repo = new ProfileRepo();
+            DataContext = repo;
+
+            var load = ProfileRepo.Retrive();
+            ProfileList.ItemsSource = load;
         }
     }
 }

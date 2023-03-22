@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Security.RightsManagement;
 using System.Text;
@@ -7,29 +8,14 @@ using System.Threading.Tasks;
 
 namespace mvvm.Models
 {
-    #region Enumerations
-    //==============================================================================================================================
-    //			Enumerations, Roles & Teams
-    //==============================================================================================================================
-    public enum Roles
-	{
-		RIFLER, AWP, IGL, SUPPORT, LURKER
-	}
-
-    public enum Teams //Opret teamnavn ved teamdannelse
-	{
-		Team1, Team2, Team3, Team4, Team5, Team6,
-	}
-	#endregion
-
 	#region Domain
 	//==============================================================================================================================
 	//			Domain, Profiles, Overloaded Constructors
 	//==============================================================================================================================
     public class Profiles
 	{
-		//Variables & Properties
-		private string name;
+        //Variables & Properties
+        private string name;
 		public string Name
 		{
 			get { return name; }
@@ -44,27 +30,22 @@ namespace mvvm.Models
 		}
 
 		internal Roles role { get; set; }
-        internal Teams team { get; set; } //delete
 
         internal bool active { get; set; }
 
-		private int level { get; set; } //1-10 incap
-
 		//Constructors
-		public Profiles(string name, string ingName, Roles role, Teams team, bool active)
+		public Profiles(string name, string ingName, Roles role, bool active)
 		{
 			this.name = name;
 			this.ingName = ingName;
 			this.role = role;
-			this.team = team;
 			this.active = active;
 		}
 
-		public Profiles(string ingName, Roles role, Teams team, bool active) : this("", ingName, role, team, active)
+		public Profiles(string ingName, Roles role, bool active) : this("", ingName, role, active)
 		{
 			this.ingName = ingName;
 			this.role = role;
-			this.team = team;
 			this.active = active;
 		}
 	}
@@ -77,28 +58,30 @@ namespace mvvm.Models
     public class ProfileRepo
 	{
 		//Variables & Properties
-		private List<Profiles> profile = new List<Profiles>();
-		private string sqlLink = "";
+		private static List<Profiles> profile = new List<Profiles>();
 		private Profiles selProfile { get; }
 
         #region Add & Remove
         //================================================================
 		//		Add & Remove
 		//================================================================
-        public void Add(string name, string ingName, Roles role, Teams team, bool active)
+        public void Add(string name, string ingName, Roles role, bool active)
 		{
-			Profiles newProfile = new Profiles(name, ingName, role, team, active);
+			Profiles newProfile = new Profiles(name, ingName, role, active);
 			profile.Add(newProfile);
 		}
 
-        public void Add(string ingName, Roles role, Teams team, bool active)
+        public void Add(string ingName, Roles role, bool active)
         {
-            Profiles newProfile = new Profiles(ingName, role, team, active);
+            Profiles newProfile = new Profiles(ingName, role, active);
             profile.Add(newProfile);
         }
 
         public void Remove()
         {
+			profile.Remove(selProfile);
+
+			/*
 			string ingName = selProfile.IngName;
 			int index = 0;
 
@@ -115,6 +98,7 @@ namespace mvvm.Models
 					index++;
 				}
 			}
+			*/
 		}
         #endregion
 
@@ -122,44 +106,52 @@ namespace mvvm.Models
         //================================================================
         //		Update attr.
         //================================================================
-        public void UpdateName(string name, int index)
+        public void UpdateName(string name, int index) //Updates in list (only needs to update in sql)
 		{
 			profile[index].Name = name;
 		}
 
-		public void UpdateIngName(string ingName, int index)
-		{
+		public void UpdateIngName(string ingName, int index) //Updates in list (only needs to update in sql)
+        {
 			profile[index].IngName = ingName;
 		}
 
-		public void UpdateRole(Roles role, int index)
-		{
+		public void UpdateRole(Roles role, int index) //Updates in list (only needs to update in sql)
+        {
 			profile[index].role = role;
 		}
 
-		public void UpdateTeam(Teams team, int index)
-		{
-			profile[index].team = team;
-		}
-
-		public void UpdateActive(bool active, int index)
-		{
+		public void UpdateActive(bool active, int index) //Updates in list (only needs to update in sql)
+        {
 			profile[index].active = active;
 		}
         #endregion
 
         #region Read
         //================================================================
-        //		Read & Load Data
+        //		List & Load Data
         //================================================================
-		public List<Profiles> Read()
+        public static List<Profiles> Retrive()
 		{
+			Load();
 			return profile;
 		}
 
-		public void Load()
+		public static void Load()
 		{
-			//Load from dataset
+			sql_controller.Connect();
+			SqlCommand cmd = new SqlCommand("SELECT Name, IngName, Role, Active FROM PROFILES", sql_controller.db_conn);
+
+			using (SqlDataReader reader = cmd.ExecuteReader())
+			{
+				while (reader.Read())
+				{
+					Profiles loadProfile = new Profiles((string)reader["Name"], (string)reader["IngName"], (Roles)Enum.Parse(typeof(Roles), reader["Role"].ToString()), (bool)reader["Active"]);
+
+					profile.Add(loadProfile);
+				}
+			}
+			sql_controller.Disconnect();
 		}
         #endregion
     }
