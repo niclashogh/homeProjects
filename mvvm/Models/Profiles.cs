@@ -13,10 +13,10 @@ namespace mvvm.Models
     //==============================================================================================================================
     public enum Roles
 	{
-		Role1, Role2, Role3, Role4, Role5, Role6,
+		RIFLER, AWP, IGL, SUPPORT, LURKER
 	}
 
-    public enum Teams
+    public enum Teams //Opret teamnavn ved teamdannelse
 	{
 		Team1, Team2, Team3, Team4, Team5, Team6,
 	}
@@ -44,9 +44,11 @@ namespace mvvm.Models
 		}
 
 		internal Roles role { get; set; }
-        internal Teams team { get; set; }
+        internal Teams team { get; set; } //delete
 
         internal bool active { get; set; }
+
+		private int level { get; set; } //1-10 incap
 
 		//Constructors
 		public Profiles(string name, string ingName, Roles role, Teams team, bool active)
