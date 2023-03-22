@@ -140,7 +140,7 @@ namespace mvvm.Models
 		public static void Load()
 		{
 			sql_controller.Connect();
-			SqlCommand cmd = new SqlCommand("SELECT Name, IngName, Role, Active FROM PROFILES", sql_controller.db_conn);
+			SqlCommand cmd = new SqlCommand("SELECT Name, IngName, Role, Active FROM PROFILES", sql_controller.sql_conn);
 
 			using (SqlDataReader reader = cmd.ExecuteReader())
 			{
