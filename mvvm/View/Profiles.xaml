@@ -7,6 +7,12 @@
         xmlns:Models="clr-namespace:mvvm.Models" x:Class="mvvm.View.Profiles"
         mc:Ignorable="d"
         Title="Management Tool" Height="450" Width="800">
+    <!-- Dictionary Resources -->
+    <Window.Resources>
+        <ResourceDictionary Source="/View/Resource Dictionaries/Profiles/Dictionary.xaml"/>
+    </Window.Resources>
+    
+    
     <Grid x:Name="grid" Margin="10">
         <!-- Grid Definitions -->
         <Grid.ColumnDefinitions>
@@ -26,48 +32,49 @@
         <Image Source="/Resources/Tricked_Logo.png" Stretch="Fill"/>
         <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="Managment" FontSize="24" FontWeight="SemiBold" VerticalAlignment="Center"/>
 
-        <!-- Content, Context Menu -->
-        <StackPanel x:Name="stackPanel" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+        <!-- Context Menu, Profiles -->
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
             <ComboBox x:Name="DropDownMenu" Height="20" Margin="5">
                 <ComboBoxItem Content="Teams"/>
                 <ComboBoxItem Content="Profiles" IsSelected="True"/>
-                <ComboBoxItem Content="Add Profile"/>
-                <ComboBoxItem Content="Inactive Profiles"/>
+                <ComboBoxItem Content="Calender"/>
             </ComboBox>
-            <ListView Name="ProfileList" Height="auto" MaxHeight="{Binding ActualHeight, ElementName=stackPanel, Mode=OneWay}" Margin="5">
+            <ListView Name="ProfileList" Style="{StaticResource ProfileList}">
                 <ListView.View>
                     <GridView>
                         
-                        <GridViewColumn Width="auto">
+                        <GridViewColumn Width="71">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding IngName}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        
-                        <GridViewColumn Width="150">
+
+                        <GridViewColumn Width="71">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Name}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        
-                        <GridViewColumn Width="0">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text=""/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                        
+
                     </GridView>
                 </ListView.View>
             </ListView>
         </StackPanel>
 
-        <!-- new.. -->
+        <!-- Top Options -->
+        <StackPanel Grid.Row="0" Grid.Column="2" Style="{StaticResource TopOption_StackPanel}">
+            <Button x:Name="TopButton1" Content="Edit" Style="{StaticResource TopOption_Button}"/>
+            <Button x:Name="TopButton2" Content="Inspect" Style="{StaticResource TopOption_Button}"/>
+            <Button x:Name="TopButton3" Content="Add new" Style="{StaticResource TopOption_Button}"/>
+        </StackPanel>
+        
+        <!-- Data Content -->
+        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical" Margin="5">
+            
+        </StackPanel>
         
     </Grid>
 </Window>
