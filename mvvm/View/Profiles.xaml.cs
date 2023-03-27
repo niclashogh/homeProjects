@@ -35,5 +35,22 @@ namespace mvvm.View
             var load = ProfileRepo.Retrive();
             ProfileList.ItemsSource = load;
         }
+
+        #region Buttons
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Inspect_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        #endregion
     }
 }

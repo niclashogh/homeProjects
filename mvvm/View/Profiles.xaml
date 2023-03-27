@@ -33,7 +33,7 @@
         <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="Managment" FontSize="24" FontWeight="SemiBold" VerticalAlignment="Center"/>
 
         <!-- Context Menu, Profiles -->
-        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Name="sideStackPanel">
             <ComboBox x:Name="DropDownMenu" Height="20" Margin="5">
                 <ComboBoxItem Content="Teams"/>
                 <ComboBoxItem Content="Profiles" IsSelected="True"/>
@@ -66,9 +66,9 @@
 
         <!-- Top Options -->
         <StackPanel Grid.Row="0" Grid.Column="2" Style="{StaticResource TopOption_StackPanel}">
-            <Button x:Name="TopButton1" Content="Edit" Style="{StaticResource TopOption_Button}"/>
-            <Button x:Name="TopButton2" Content="Inspect" Style="{StaticResource TopOption_Button}"/>
-            <Button x:Name="TopButton3" Content="Add new" Style="{StaticResource TopOption_Button}"/>
+            <Button x:Name="TopButton1" Content="Edit" Style="{StaticResource TopOption_Button}" Click="Edit_Click"/>
+            <Button x:Name="TopButton2" Content="Inspect" Style="{StaticResource TopOption_Button}" Click="Inspect_Click"/>
+            <Button x:Name="TopButton3" Content="Add new" Style="{StaticResource TopOption_Button}" Click="Add_Click"/>
         </StackPanel>
         
         <!-- Data Content -->
