@@ -23,8 +23,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "enumerations", "enumeration
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF", "WPF\WPF.csproj", "{F2176446-3F06-4F48-864A-B74182FB766C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvvm", "mvvm\mvvm.csproj", "{6057A06D-A8FC-4617-B842-00CEA63BF015}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,10 +69,6 @@ Global
 		{F2176446-3F06-4F48-864A-B74182FB766C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2176446-3F06-4F48-864A-B74182FB766C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2176446-3F06-4F48-864A-B74182FB766C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6057A06D-A8FC-4617-B842-00CEA63BF015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6057A06D-A8FC-4617-B842-00CEA63BF015}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6057A06D-A8FC-4617-B842-00CEA63BF015}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6057A06D-A8FC-4617-B842-00CEA63BF015}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
