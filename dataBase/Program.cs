@@ -1,5 +1,5 @@
-﻿using dataBase.ViewModels;
-using dataBase.Models;
+﻿using dataBase.Models;
+using dataBase.Repositories;
 
 namespace dataBase
 {

@@ -17,7 +17,7 @@ namespace subscription
 
         public class Pub
         {
-            //Using Delegate
+            //Instanciate Delegate
             public NewsHandler BroadcastNews;
 
             //Variables & Properties

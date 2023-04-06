@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//Namespaces
 using dataBase.Models;
 
-namespace dataBase.ViewModels
+namespace dataBase.Repositories
 {
     public class PersonRepo
     {
